@@ -23,6 +23,8 @@ public class MainTaller {
         taller.registrarReparacion(carlos, Lexus);
         taller.registrarReparacion(anna, Austin);
 
+
+        
         // Creo una lista (DamList) y le añado los coches
         DamList<Coche> listaCoches=new DamList<Coche>();
         listaCoches.add(Jaguar);
