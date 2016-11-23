@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 /**
  * Created by Sergio Cuevas on 05/10/2016.
  */
@@ -21,9 +23,19 @@ public class MainTaller {
         taller.registrarReparacion(carlos, Lexus);
         taller.registrarReparacion(anna, Austin);
 
-        System.out.println(taller.obtenerCoche(jose));
+        // Creo una lista (DamList) y le añado los coches
+        DamList<Coche> listaCoches=new DamList<Coche>();
+        listaCoches.add(Jaguar);
+        listaCoches.add(Lexus);
+        listaCoches.add(Austin);
+        System.out.println(listaCoches);
+        //Llamo a la función borrarSi, que borra si cumple la condicion que le pasa, creada en la clase DamList
+        listaCoches.borrarSi(coche -> coche.getMatricula().equals("1234ENG"));
+
+        System.out.println(listaCoches);
+        //System.out.println(taller.obtenerCoche(jose));
         // debes comprobar que las personas aparecen ordenadas según el criterio especificado en el comparador
         // que se pasa al constructor del TreeMap
-        System.out.println(taller.obtenerClientes());
+       // System.out.println(taller.obtenerClientes());
     }
 }
